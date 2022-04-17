@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "storage_account_name": {
-        "value": "staparametervalue"
+        "value": "parametervalue"
       },
       "location": {
         "value": "east asia"

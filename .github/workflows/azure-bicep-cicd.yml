@@ -33,7 +33,9 @@ jobs:
       - name: az bicep deploy
         working-directory: '${{github.workspace}}/src/bicep'
         run: |
-          az deployment group create --what-if --resource-group deleteme --template-file ./sta.bicep
+          az deployment group create --what-if --resource-group deleteme --template-file ./sta.bicep --parameters @parameters.json
+        # The cli line below uses no parameters value/file 
+        # az deployment group create --resource-group deleteme --template-file ./sta.bicep
         # or ./src/bicep/sta.bicep without the 'working-directory'
         # added --what-if paramater
 
@@ -57,7 +59,9 @@ jobs:
       - name: az bicep deploy
         working-directory: '${{github.workspace}}/src/bicep'
         run: |
-          az deployment group create --resource-group deleteme --template-file ./sta.bicep
+           az deployment group create --resource-group deleteme --template-file ./sta.bicep --parameters @parameters.json
+        # The cli line below uses no parameters value/file 
+        # az deployment group create --resource-group deleteme --template-file ./sta.bicep
         # or ./src/bicep/sta.bicep without the 'working-directory'
         
 

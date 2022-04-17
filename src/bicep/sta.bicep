@@ -1,5 +1,5 @@
 @description('storage account name')
-param storage_account_name string = 'second${uniqueString(resourceGroup().name)}'
+param storage_account_name string = 'noparamater${uniqueString(resourceGroup().name)}'
 
 @description('storage account location')
 param location string = 'east asia' 
