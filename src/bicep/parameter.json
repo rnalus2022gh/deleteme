@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "storage_account_name": {
-        "value": "st12mskuexrome"
+        "value": "sta12mskuexrome"
       },
       "location": {
         "value": "east asia"
