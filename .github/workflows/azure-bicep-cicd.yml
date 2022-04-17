@@ -28,6 +28,6 @@ jobs:
       - uses: azure/login@v1
         with:
          creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
-      - run: |
-            az group list
+      - name: az bicep deploy
+        run: |
+          az deployment group create --resource-group deleteme --template-file ./src/bicep/sta.bicep 
