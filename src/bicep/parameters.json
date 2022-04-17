@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "storage_account_name": {
-        "value": "parametervalue"
+        "value": "parametervaluename"
       },
       "location": {
-        "value": "east asia"
+        "value": "southeast asia"
       }
     }
   }
