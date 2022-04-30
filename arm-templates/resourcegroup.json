@@ -1,32 +1,27 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
+    "contentVersion": "1.0.0.1",
     "parameters": {
-        "location": {
-            "type": "string",
-            "metadata": {
-                "description": "Enter the lcoation to deploy resources to."
-            },
-            "defaultValue": "East Asia"
+        "rgName": {
+            "type": "string"
         },
-        "resourceGroupName": {
-            "type": "string",
-            "metadata": {
-                "description": "Enter RG name."
-            },
-            "defaultValue": "rg-githubactions"
+        "rgLocation": {
+            "type": "string"
+        },
+        "tags": {
+            "type": "object",
+            "defaultValue": {}
         }
     },
-    "functions": [],
     "variables": {},
     "resources": [
         {
-            "name": "[parameters('resourceGroupName')]",
             "type": "Microsoft.Resources/resourceGroups",
-            "apiVersion": "2021-05-01",
-            "location": "[parameters('location')]",
-            "dependsOn": [],
-            "tags": {}
+            "apiVersion": "2018-05-01",
+            "location": "[parameters('rgLocation')]",
+            "name": "[parameters('rgName')]",
+            "properties": {},
+            "tags": "[parameters('tags')]"
         }
     ],
     "outputs": {}
