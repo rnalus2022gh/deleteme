@@ -3,14 +3,18 @@
     "contentVersion": "1.0.0.1",
     "parameters": {
         "rgName": {
-            "type": "string"
+            "type": "string",
+            "metadata": {
+                "description": "Enter RG name."
+            },
+            "defaultValue": "rg-githubactions"
         },
         "rgLocation": {
-            "type": "string"
-        },
-        "tags": {
-            "type": "object",
-            "defaultValue": {}
+            "type": "string",
+            "metadata": {
+                "description": "Enter the location to deploy resources to."
+            },
+            "defaultValue": "East Asia"
         }
     },
     "variables": {},
@@ -20,8 +24,7 @@
             "apiVersion": "2018-05-01",
             "location": "[parameters('rgLocation')]",
             "name": "[parameters('rgName')]",
-            "properties": {},
-            "tags": "[parameters('tags')]"
+            "properties": {}
         }
     ],
     "outputs": {}
