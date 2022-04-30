@@ -23,5 +23,5 @@ jobs:
         uses: Azure/cli@v1
         with: 
           inlinescript: |
-            az deployment sub create --location "East US" --template-file ./arm-templates/resourcegroup.json
+            az deployment sub create --location "East US" --template-file ./arm-templates/resourcegroup.json --unhandled-rejections=strict`
           
